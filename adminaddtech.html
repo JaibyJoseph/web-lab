@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Teacher</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5ZtPBXn8N8kkVJkOhSSh79ItJWvaO2U1UXg&s');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+            backdrop-filter: blur(5px);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 80%;
+            max-width: 800px;
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px; /* Space between form items */
+        }
+
+        h1 {
+            text-align: center;
+            color: #333333;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .input-box {
+            flex: 1 1 calc(50% - 20px); /* 50% width with gap consideration */
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: bold;
+            color: #333333;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="date"],input[type="email"],
+        textarea,
+        select,
+        input[type="tel"] {
+            height: 40px;
+            padding: 0 10px;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 14px;
+            font-weight: bold;
+            color: #333333;
+            background-color: #f5f5f5;
+            margin-top: 5px;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 120px;
+            font-style: italic;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            padding: 12px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            width: 100%;
+            display: block;
+            margin-top: 20px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .required {
+            color: red;
+        }
+
+        /* Specific adjustments for Deadline */
+        .date-box {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .date-box label {
+            margin-bottom: 5px;
+        }
+
+        .date-box input[type="date"] {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="box-form">
+        <h1>Enter Teacher Details</h1>
+
+        <form action="#" method="post">
+            <div class="content">
+                <div class="input-box">
+                    <label for="fname">First Name <span class="required">*</span>:</label>
+                    <input type="text" id="fname" name="fname" pattern="[A-Za-z]{2,}" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="lname">Last Name <span class="required">*</span>:</label>
+                    <input type="text" id="lname" name="lname" pattern="[A-Za-z]{2,}" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="address">Address <span class="required">*</span>:</label>
+                    <textarea id="address" name="address" required></textarea>
+                </div>
+
+                <div class="input-box date-box">
+                    <label for="dob">Date of Birth <span class="required">*</span>:</label>
+                    <input type="date" id="dob" name="dob" max="2013-12-31" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="email">Email ID <span class="required">*</span>:</label>
+                    <input type="email" id="email" name="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required placeholder="Enter a valid email address">
+                </div>
+
+                <div class="input-box">
+                    <label for="phone">Phone Number <span class="required">*</span>:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter 10-digit phone number" pattern="[1-9][0-9]{9}" required>
+                </div>
+
+                <div class="input-box date-box">
+                    <label for="doj">Joining Date <span class="required">*</span>:</label>
+                    <input type="date" id="doj" name="doj" max="2024-07-23" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="subID">Subject ID <span class="required">*</span>:</label>
+                    <input type="text" id="subID" name="subID" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="tecahID">Teacher ID <span class="required">*</span>:</label>
+                    <input type="text" id="tecahID" name="teachID" required>
+                </div>
+            </div>   
+
+            <input type="submit" name="ADD" value="Submit">
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

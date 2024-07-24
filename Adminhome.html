@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: url("adminhomebg.jpg");
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        #admin-details {
+            background-color:rgba(228, 210, 210, 0.5);
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        #schl-logo {
+            float: left;
+            margin-right: 20px;
+           /* position: absolute;
+            top: 0;
+            left: 0;*/
+        }
+
+        #notification-icon,
+        #logout-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+
+        #logout-icon {
+            right: 40px; /* Adjusted right position for the logout icon */
+        }
+
+        #dashboard {
+            float: left;
+            width: 20%;
+            background-color:rgba(228, 210, 210, 0.5);
+            padding: 20px;
+            height: 100vh;
+        }
+
+        #admin-info-dashboard {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #functions {
+            display: grid;
+            grid-template-columns: repeat(2, 5fr); /* Adjust the number of columns as needed */
+            gap: 30px;
+            padding: 40px;
+            
+        }
+
+        .funct-item {
+            border: 1px solid #ddd;
+            padding: 10px;
+            background-color:rgba(189, 122, 122, 0.2);
+            text-align: center;
+            transition: background-color 0.3s ease; /* Added transition effect */
+            height:65px;
+        }
+
+        .funct-item:hover {
+            background-color: #f0f0f0; /* Background color on hover */
+            cursor: pointer;
+        }
+
+        a{
+            color: #333;
+            font-size: 25px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Admin Portal
+    </header>
+
+    <div id="admin-details">
+        <div id="schl-logo">
+            <img src="" alt="School Logo" width="70">
+        </div>
+
+        <div id="notification-icon">
+            <i class="fas fa-bell"></i>
+        </div>
+
+        <div id="schl-logo">
+            <i class="fas fa-sign-out-alt"></i>
+        </div>
+    </div>
+
+    <div id="dashboard">
+        <div id="admin-info-dashboard">
+            <img src="C:\Users\Jaiby Joseph\OneDrive\Desktop\UYA\user img.jpg" alt="Teacher Image" width="170"><br>
+            <h3>Name: Jaiby Joseph</h3>
+            <h3>Department: Administration</h3>
+            <h3>Admin ID: A001</h3>
+        </div>
+    </div>
+
+    <div id="functions">
+        <div class="funct-item">
+            <a href="adminaddtech.html">Add Teacher</a>
+        </div>
+        <div class="funct-item">
+            <h2>Remove Teacher</h2>
+        </div>
+        <div class="funct-item">
+            <h2>Add Student</h2>
+        </div>
+        <div class="funct-item">
+            <h2>Remove Student</h2>
+        </div>
+        
+    </div>
+</body>
+</html>
